@@ -1,16 +1,20 @@
 import java.util.Random;
 
-public class DuckEagleAdater implements Duck, Eagle {
+/*
+This class is considered a Two-Way Adapter because it can adapt an Eagle to a Duck or a Duck to an Eagle as shown in
+the App class.
+ */
+public class DuckEagleAdapter implements Duck, Eagle {
     private Duck duck;
     private Eagle eagle;
     private Random random;
 
-    public DuckEagleAdater(Eagle eagle) {
+    public DuckEagleAdapter(Eagle eagle) {
         this.eagle = eagle;
         this.random = new Random();
     }
 
-    public DuckEagleAdater(Duck duck) {
+    public DuckEagleAdapter(Duck duck) {
         this.duck = duck;
     }
 

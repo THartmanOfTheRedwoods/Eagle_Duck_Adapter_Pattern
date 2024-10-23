@@ -7,7 +7,7 @@ public class App {
         ducks.add(new MallardDuck());
         ducks.add(new RubberDuck());
         Eagle superMascott = new BaldEagle();
-        ducks.add(new DuckEagleAdater(superMascott));
+        ducks.add(new DuckEagleAdapter(superMascott));
 
         for(Duck d : ducks) {
             d.fly();
@@ -17,7 +17,7 @@ public class App {
         System.out.println("================");
         List<Eagle> eagles = new ArrayList<>();
         eagles.add(superMascott);
-        eagles.add(new DuckEagleAdater(new RubberDuck()));
+        eagles.add(new DuckEagleAdapter(new RubberDuck()));
 
         for(Eagle e : eagles) {
             e.flyHigh();
